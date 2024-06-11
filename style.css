@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.container {
+  display: flex;
+  margin: auto;
+  margin-top: 15%;
+  background-color: hsl(210, 46%, 95%);
+  max-width: 720px;
+  height: auto;
+}
+
+.container img {
+  width: 100%;
+  height: 100%;
+}
+
+.container .title {
+  padding: 40px 40px 20px 40px;
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+
+.container .text {
+  padding: 0px 40px 40px 40px;
+  padding-top: 0;
+  color: hsl(212, 23%, 69%);
+  font-weight: 500;
+}
+
+.container .shareComponent {
+  padding: 0px 40px 20px 20px;
+  display: flex;
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+
+.container .shareComponent .modelImage {
+  display: block;
+  width: 10%;
+  height: 10%;
+  border-radius: 100%;
+  padding: 0 20px;
+}
+.container .shareComponent .post .date {
+  color: hsl(212, 23%, 69%);
+  font-weight: 500;
+  font-size: 12px;
+  padding-left: 2px;
+}
+
+.container .shareComponent .shareIcon {
+  margin-left: 30%;
+  width: auto;
+  border-radius: 100%;
+  padding: 6px;
+}
+
+.container .shareComponent .shareIcon:hover {
+  cursor: pointer;
+}
+
+.container .shareComponent .shareContent {
+  background-color: hsl(217, 19%, 35%);
+  display: none;
+  position: absolute;
+  left: 865px;
+  top: 385px;
+  padding: 8px;
+  border-radius: 10px;
+  border-left: 15px solid;
+  border-right: 15px solid;
+}
+
+.container .shareComponent .shareContent.active {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.container .shareComponent .shareContent.active p {
+  margin: auto;
+  color: hsl(212, 23%, 69%);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 4px;
+}
+
+.container .shareComponent .shareContent.active img {
+  width: 20px;
+  height: 20px;
+  padding: 4px;
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 475px) {
+  .container {
+    display: inline;
+    margin: auto;
+    margin-top: 15%;
+    background-color: hsl(210, 46%, 95%);
+    max-width: 237.5px;
+    height: auto;
+  }
+
+  .container img {
+    width: 75%;
+    height: 75%;
+    margin: 10px 0px 0px 50px;
+  }
+
+  .container .shareComponent .modelImage {
+    display: none;
+  }
+
+  .container .shareComponent .modelImage.active {
+    display: block;
+    width: 10%;
+    height: 10%;
+    border-radius: 100%;
+    padding: 0 20px;
+  }
+
+  .container .shareComponent .shareIcon {
+    margin-left: auto;
+    height: 13px;
+    width: 15px;
+    border-radius: 100%;
+    position: absolute;
+    top: 520px;
+    left: 80%;
+  }
+
+  .container .shareComponent .shareIcon:hover {
+    cursor: pointer;
+  }
+
+  .container .shareComponent .post {
+    display: none;
+  }
+
+  .container .shareComponent .post.active {
+    display: block;
+  }
+  .container .shareComponent .shareContent {
+    background-color: hsl(217, 19%, 35%);
+    display: none;
+    top: auto;
+    left: 5%;
+    width: 55%;
+    height: 50px;
+    position: relative;
+    border-radius: 0 0 10px 10px;
+    padding-right: 100px;
+  }
+
+  .container .shareComponent .shareContent.active p {
+    margin: auto;
+    color: hsl(212, 23%, 69%);
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+
+  .container .shareComponent .shareContent.active img {
+    margin: 10px 0; 
+  }
+}
